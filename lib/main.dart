@@ -5,7 +5,7 @@ import 'package:flutter/services.dart';
 void main() {
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
       systemNavigationBarColor: Colors.transparent,
-      statusBarColor: Colors.cyan,
+      statusBarColor: Colors.blue[900],
       systemNavigationBarIconBrightness: Brightness.dark));
 
   runApp(MaterialApp(
@@ -21,13 +21,13 @@ class MyApp extends StatefulWidget {
 }
 
 List<Color> myColors = [
-  Colors.teal,
-  Colors.orangeAccent,
-  Colors.purpleAccent,
-  Colors.blueAccent,
-  Colors.redAccent,
-  Colors.greenAccent,
-  Colors.pinkAccent
+  Colors.indigo,
+  Colors.deepPurple,
+  Colors.purple,
+  Colors.pink[700],
+  Colors.deepOrange[700],
+  Colors.orange,
+  Colors.amber
 ];
 
 class _MyAppState extends State<MyApp> {
@@ -72,7 +72,7 @@ class _MyAppState extends State<MyApp> {
         floatingActionButton: FloatingActionButton(
           tooltip: 'Add a color',
           child: Icon(Icons.add),
-          backgroundColor: Colors.cyan,
+          backgroundColor: Colors.blue[900],
           elevation: 9,
           onPressed: () {
             setState(() {
@@ -82,7 +82,7 @@ class _MyAppState extends State<MyApp> {
         ),
         appBar: AppBar(
           title: Text('Hello frens'),
-          backgroundColor: Colors.cyan,
+          backgroundColor: Colors.blue[900],
         ),
         body: ListView.builder(
           physics: BouncingScrollPhysics(),
@@ -96,7 +96,7 @@ class _MyAppState extends State<MyApp> {
                 child: Card(
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20)),
-                  elevation: 7,
+                  elevation: 3,
                   color: myColors[index],
                   child: Center(
                     child: ListTile(
